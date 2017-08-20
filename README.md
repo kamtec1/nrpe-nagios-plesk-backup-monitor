@@ -1,6 +1,7 @@
 # nrpe-nagios-plesk-backup-monitor
 NRPE check Plesk backup status
-#nrpe-nagios-plesk-backup-monitor v 0.1a 
+
+nrpe-nagios-plesk-backup-monitor v 0.1a 
 Written by Sergey Babkevych SecurityInet https://www.securityinet.com
 
 Summary:
