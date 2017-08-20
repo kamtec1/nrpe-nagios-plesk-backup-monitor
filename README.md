@@ -1,6 +1,7 @@
 # nrpe-nagios-plesk-backup-monitor
 NRPE check Plesk backup status
-#nrpe-nagios-plesk-backup-monitor v 0.1a by Sergey Babkevych SecurityInet https://www.securityinet.com
+#nrpe-nagios-plesk-backup-monitor v 0.1a 
+Written by Sergey Babkevych SecurityInet https://www.securityinet.com
 
 Summary:
 This is a plugin (backup_plesk_checker) that monitors backup status in Plesk panel - Success/Warning/Error/Date checker.
