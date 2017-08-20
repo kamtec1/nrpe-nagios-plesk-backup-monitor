@@ -13,3 +13,6 @@ This plugin have 4 main options:
 2) Warning status - backup have warnings
 3) Error status - backup have errors
 4) Backup unsuccessful - date not equal to backup date
+
+
+and will be more :) 
