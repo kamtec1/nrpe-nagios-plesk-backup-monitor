@@ -36,4 +36,4 @@ And the Final step is to define service/define command to specific servers in N
 nrpe-nagios-plesk-backup-monitor 20.08.2017 v0.1a 
 Written by Sergey Babkevych SecurityInet https://www.securityinet.com
 Plugin main page: https://www.securityinet.com/nrpe-nagios-plesk-backup-monitor/
-
+nrpe-nagios-plesk-backup-monitor is licensed under the GNU General Public License v3.0
