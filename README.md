@@ -30,8 +30,8 @@ command[check_backup]=/usr/bin/sudo /usr/lib64/nagios/plugins/backup_plesk_check
 Copy backup_plesk_checker.sh to /usr/lib64/nagios/plugins/ and give this script 777 or just execute :)
 
 And the Final step is to define service/define command to specific servers in Nagios server.
-================================================================================================
 
+###
 
 nrpe-nagios-plesk-backup-monitor v 0.1a 
 Written by Sergey Babkevych SecurityInet https://www.securityinet.com
