@@ -2,12 +2,12 @@
 NRPE check Plesk backup status
 
 Compatibility with plesk panel versions:
-17.8 - NO
-17.5 - NO
-17.0 - OK
-12.5 - OK
-12.0 - OK
-11.0 - OK
+1) 17.8 - NO
+2) 17.5 - NO
+3) 17.0 - OK
+4) 12.5 - OK
+5) 12.0 - OK
+6) 11.0 - OK
 
 Summary:
 This is a plugin (backup_plesk_checker) that monitors backup status in Plesk panel - Success/Warning/Error/Date checker.
