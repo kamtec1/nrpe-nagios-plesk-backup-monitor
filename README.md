@@ -1,14 +1,6 @@
 # nrpe-nagios-plesk-backup-monitor
 NRPE check Plesk backup status
 
-Compatibility with plesk panel versions:
-1) 17.8 - NO
-2) 17.5 - NO
-3) 17.0 - OK
-4) 12.5 - OK
-5) 12.0 - OK
-6) 11.0 - OK
-
 Summary:
 This is a plugin (backup_plesk_checker) that monitors backup status in Plesk panel - Success/Warning/Error/Date checker.
 
@@ -24,7 +16,13 @@ This plugin have 4 main options:
 
 and will be more :) 
 
-
+Compatibility with plesk panel versions:
+1) 17.8 - NO
+2) 17.5 - NO
+3) 17.0 - OK
+4) 12.5 - OK
+5) 12.0 - OK
+6) 11.0 - OK
 
 Installation instructions:
 
