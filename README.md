@@ -12,7 +12,7 @@ This plugin have 4 main options:
 2) Warning status - backup have warnings
 3) Error status - backup have errors
 4) Backup Completed unsuccessfully - date of the server not equal to backup date
-5) Not all domains are backuped - How many domains have been backuped if the number is not equeal it will give warning
+5) Not all domains are backuped - How many domains have been backuped if the number is not equal it will give warning
 
 and will be more :) 
 
