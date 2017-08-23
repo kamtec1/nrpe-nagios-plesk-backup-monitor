@@ -32,7 +32,18 @@ Copy backup_plesk_checker.sh to /usr/lib64/nagios/plugins/ and give this scrip
 And the Final step is to define service/define command to specific servers in Nagios server.
 
 ------------------------------------------------------------------------------------
+# Change log
+23.08.2017 - 0.2
+1. 
 
+. Removed bash debug (#set -x)
+
+20.08.2017 - 0.1a
+1.First release 
+
+
+
+------------------------------------------------------------------------------------
 nrpe-nagios-plesk-backup-monitor 20.08.2017 v0.1a 
 Written by Sergey Babkevych SecurityInet https://www.securityinet.com
 Plugin main page: https://www.securityinet.com/nrpe-nagios-plesk-backup-monitor/
