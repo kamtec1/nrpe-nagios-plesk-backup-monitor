@@ -11,8 +11,8 @@ This plugin have 4 main options:
 1) Success status - backup ok
 2) Warning status - backup have warnings
 3) Error status - backup have errors
-4) Backup unsuccessful - date not equal to backup date
-
+4) Backup Completed unsuccessfully - date of the server not equal to backup date
+5) Not all domains are backuped - How many domains have been backuped if the number is not equeal it will give warning
 
 and will be more :) 
 
@@ -38,17 +38,16 @@ Copy backup_plesk_checker.sh to /usr/lib64/nagios/plugins/ and give this scrip
 And the Final step is to define service/define command to specific servers in Nagios server.
 
 ------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 # Change log
 23.08.2017 - 0.2
-1. 
-
-. Removed bash debug (#set -x)
+1) EDIT: Removed bash debug (#set -x)
+2) ADDED: NEW check!!! How many domains have been backuped - if the number is not equeal it will give warning
+3) EDIT: Comments in the code + some cleaning...
 
 20.08.2017 - 0.1a
-1.First release 
-
-
-
+1) First release 
+------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 nrpe-nagios-plesk-backup-monitor 20.08.2017 v0.1a 
 Written by Sergey Babkevych SecurityInet https://www.securityinet.com
