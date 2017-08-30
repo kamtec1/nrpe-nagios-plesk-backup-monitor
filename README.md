@@ -37,9 +37,22 @@ Copy backup_plesk_checker.sh to /usr/lib64/nagios/plugins/ and give this scrip
 
 And the Final step is to define service/define command to specific servers in Nagios server.
 
+Make sure that in /usr/local/psa/admin/share/pmmcli/pmmcli-rc you have 
+DAYS_TO_KEEP_SESSIONS 30
+This parameter working ONLY for backups that have errors or warnings.
+Unfortunately plesk deletes some files after short period of time when backup finishes with Success. 
+In next version ( 0.3 ) will be with workaround for that plesk "feature"..
+
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 # Change log
+
+
+
+Next release (soon): 0.3
+1) FIX: workaround for warnings
+
+
 23.08.2017 - 0.2
 1) EDIT: Removed bash debug (#set -x)
 2) ADDED: NEW check!!! How many domains have been backuped - if the number is not equeal it will give warning
@@ -51,5 +64,6 @@ And the Final step is to define service/define command to specific servers in N
 ------------------------------------------------------------------------------------
 nrpe-nagios-plesk-backup-monitor 23.08.2017 v0.2 
 Written by Sergey Babkevych SecurityInet https://www.securityinet.com
+Email: kamtec1 @ gmail
 Plugin main page: https://www.securityinet.com/nrpe-nagios-plesk-backup-monitor/
 nrpe-nagios-plesk-backup-monitor is licensed under the GNU General Public License v3.0
