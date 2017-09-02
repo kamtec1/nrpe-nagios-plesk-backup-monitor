@@ -26,6 +26,12 @@ Compatibility with plesk panel versions:
 
 Installation instructions:
 
+Put some txt file or other file inside one of the domains and change perrmissions to it : 
+/var/www/vhosts/example.com/httpdocs/file.txt
+chmod 600 /var/www/vhosts/example.com/httpdocs/file.txt
+chown root:root /var/www/vhosts/example.com/httpdocs/file.txtchown root:root /var/www/vhosts/example.com/httpdocs/file.txt
+*This is needed to do - without it this script will not work - in 0.3 i will fix the warnings to that file .
+
 Edit file /etc/sudoers and add the following;
 
 nrpe ALL=(root) NOPASSWD: /usr/lib64/nagios/plugins/backup_plesk_checker.sh
@@ -40,7 +46,7 @@ And the Final step is to define service/define command to specific servers in N
 Make sure that in /usr/local/psa/admin/share/pmmcli/pmmcli-rc you have 
 DAYS_TO_KEEP_SESSIONS 30
 This parameter working ONLY for backups that have errors or warnings.
-Unfortunately plesk deletes some files after short period of time when backup finishes with Success. 
+
 In next version ( 0.3 ) will be with workaround for that plesk "feature"..
 
 ------------------------------------------------------------------------------------
