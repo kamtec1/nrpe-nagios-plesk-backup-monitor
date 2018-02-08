@@ -13,7 +13,7 @@
 #If you hgave questions you may send me a massage : kamtec1@gmail.com or sergey@securityinet.com
 
 
-set -x
+#set -x
 
 LC_ALL=C
 STATE_OK=0
