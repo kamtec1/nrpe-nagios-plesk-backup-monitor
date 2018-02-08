@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#nrpe-nagios-plesk-backup-monitor v 0.2
-#Last update: 23.08.2017
+#nrpe-nagios-plesk-backup-monitor v 0.3
+#Last update: 07.02.2018
 #Written by Sergey Babkevych (kamtec1) SecurityInet 
 #SecurityInet Web site for updates regarding new release
 #https://www.securityinet.com
@@ -13,7 +13,8 @@
 #If you hgave questions you may send me a massage : kamtec1@gmail.com or sergey@securityinet.com
 
 
-#set -x
+set -x
+
 LC_ALL=C
 STATE_OK=0
 STATE_WARNING=1
@@ -24,22 +25,69 @@ current_date=`date +%Y-%m-%d`
 
 #get date format from file
 backup_date_check=$(ls --time-style=+%s --sort=time /usr/local/psa/PMM/sessions | grep -v "^total " | head -n 1 | cut -d "-" -f1,2,3)
-#echo $backup_date_check
+backup_date_check_discovered=$(ls --time-style=+%s --sort=time /var/lib/psa/dumps/.discovered | grep -v "^total " | head -n 1 | cut -d "-" -f1,2,3)
 
-#printf $backup_date_check >> /var/log/check_backup.log
+
+check_date_discovered_folder=$(ls -ltr --full-time /var/lib/psa/dumps/.discovered | grep ^d | grep $backup_date_check_discovered |awk '{print $6}')
+
 
 ##########################################
 #check if time of the folder is the time of the server - every day backup
 ##########################################
-
-if [ "$current_date" != "$backup_date_check" ]
+if [ "$current_date" != "$check_date_discovered_folder" ]
 then
-echo "Backup Completed unsuccessfully - Problem in backup folder"
+echo "Backup Completed unsuccessfully"
 exit $STATE_CRITICAL
 fi
 
 ########################################
 ########################################
+
+###START###
+################check one more folder that have plesk logs and output#########
+
+
+
+check_file_discovered=$(ls --time-style=+%s --sort=time /var/lib/psa/dumps/.discovered | grep -v "^total " | head -n 1 | cut -d "-" -f1,2,3)
+
+#printf $check_file_discovered
+
+FILE_discovered=$(ls "/var/lib/psa/dumps/.discovered/$check_file_discovered" | grep "dumpresult")
+
+
+
+
+if [ "$FILE_discovered" = "dumpresult_SUCCESS" ]
+then
+echo "Backup Completed successfully"
+exit $STATE_OK
+fi
+
+
+
+
+if      [ $FILE_discovered == 'dumpresult_SUCCESS' ]
+then
+        echo "server is backuped OK -Server date: $current_date -Backup date: $backup_date"
+#       echo $STATE_OK
+        exit $STATE_OK
+
+elif    [ $FILE_discovered == 'dumpresult_WARNINGS' ]
+then
+        echo "server is backuped with WARNINGS"
+#       echo $STATE_WARNING
+        exit $STATE_OK
+else
+        echo "BACKUP FAILED"
+#       echo $STATE_CRITICAL
+        exit $STATE_CRITICAL
+fi
+
+
+
+###END
+
+
 
 #main location of backup logs
 dirlocation="/usr/local/psa/PMM/sessions"
@@ -86,9 +134,15 @@ elif    [ $serverstatus == 'warnings' ]
 then
         echo "server is backuped with $serverstatus last backup date: $backup_date"
 #       echo $STATE_WARNING
-        exit $STATE_WARNING
+        exit $STATE_OK
 else
         echo "server is backuped with $serverstatus last backup date: $backup_date"
 #       echo $STATE_CRITICAL
         exit $STATE_CRITICAL
 fi
+
+
+
+################
+
+
