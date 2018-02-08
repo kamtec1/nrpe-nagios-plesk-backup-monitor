@@ -53,13 +53,12 @@ In next version ( 0.3 ) will be with workaround for that plesk "feature"..
 ------------------------------------------------------------------------------------
 # Change log
 ===============================
-Next release (soon): 0.4
-1) FIX: workaround for warnings
 
+Next release: 0.4
+1) FIX: workaround for warnings
 
 07.02.2018 - 0.3
 1)ADDED : Added one more log location to check if all is ok. 
-
 
 23.08.2017 - 0.2
 1) EDIT: Removed bash debug (#set -x)
