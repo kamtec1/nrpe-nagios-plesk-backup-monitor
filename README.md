@@ -55,6 +55,7 @@ In next version ( 0.3 ) will be with workaround for that plesk "feature"..
 ===============================
 
 07.02.2018 - 0.3
+
 1)ADDED : Added one more log location to check if all is ok. 
 
 23.08.2017 - 0.2
