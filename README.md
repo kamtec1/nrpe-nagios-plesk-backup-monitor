@@ -55,7 +55,7 @@ In next version ( 0.3 ) will be with workaround for that plesk "feature"..
 ===============================
 
 Next release: 0.4
-1) FIX: workaround for warnings
+1)FIX: workaround for warnings
 
 07.02.2018 - 0.3
 1)ADDED : Added one more log location to check if all is ok. 
