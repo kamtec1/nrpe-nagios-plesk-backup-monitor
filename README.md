@@ -14,6 +14,12 @@ This plugin have 4 main options:
 4) Backup Completed unsuccessfully - date of the server not equal to backup date
 5) Not all domains are backuped - How many domains have been backuped if the number is not equal it will give warning
 
+======================================
+NEW V.1.0 script can only check PLESK backup status + dumpstatus !!
+======================================
+
+
+
 and will be more :) 
 
 Compatibility with plesk panel versions:
@@ -53,6 +59,14 @@ In next version ( 0.3 ) will be with workaround for that plesk "feature"..
 ------------------------------------------------------------------------------------
 # Change log
 ===============================
+======================================
+NEW V.1.0 script can only check PLESK backup status + dumpstatus !!
+======================================
+===============================
+
+# Change log
+05.12.18 - 1.0
+1)EDIT: script redesign
 
 07.02.2018 - 0.3
 
