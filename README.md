@@ -61,7 +61,6 @@ In next version ( 0.3 ) will be with workaround for that plesk "feature"..
 NEW V.1.0 script can only check PLESK backup status + dumpstatus !!
 =
 
-# Change log
 05.12.18 - 1.0
 1)EDIT: script redesign
 
